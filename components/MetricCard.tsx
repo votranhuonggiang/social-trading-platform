@@ -1,4 +1,8 @@
-import { Metric } from '@/lib/mock-data';
+interface Metric {
+  label: string;
+  value: string;
+  statusColor: 'green' | 'red' | 'gray';
+}
 
 export default function MetricCard({ metric }: { metric: Metric }) {
   const colorClass = metric.statusColor === 'green' ? 'text-green-600' : metric.statusColor === 'red' ? 'text-red-600' : 'text-gray-600';
